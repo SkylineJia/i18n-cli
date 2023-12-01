@@ -10,6 +10,7 @@ const pluginSyntaxDoExpressions = require('@babel/plugin-syntax-do-expressions')
 const pluginSyntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import')
 const pluginSyntaxExportExtensions = require('@babel/plugin-syntax-export-extensions')
 const pluginSyntaxFunctionBind = require('@babel/plugin-syntax-function-bind')
+const pluginTransformFlowStripTypes = require("@babel/plugin-transform-flow-strip-types")
 
 type presetsType = PluginItem[] | undefined
 type pluginsType = PluginItem[] | undefined
@@ -31,6 +32,7 @@ export function initParse(babelPresets: presetsType = [], babelPlugins: pluginsT
         pluginSyntaxDynamicImport,
         pluginSyntaxExportExtensions,
         pluginSyntaxFunctionBind,
+        pluginTransformFlowStripTypes,
         ...babelPlugins,
       ],
     })
